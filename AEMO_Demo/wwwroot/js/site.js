@@ -1,5 +1,4 @@
-﻿
-//Find subtext matches method
+﻿//Find subtext matches method
 $(document).ready(function () {
     $('#btnSubmit').click(function () {
         $.ajax({
@@ -10,7 +9,7 @@ $(document).ready(function () {
             cache: false,
             async: true,
             success: function (msg) {
-                $('#txtMatchIndexes').val(msg);
+                $('#txtMatchIndexes').val(!msg || 0 === msg.length ? msg = 'No matches' : msg);
             }
         });
     });

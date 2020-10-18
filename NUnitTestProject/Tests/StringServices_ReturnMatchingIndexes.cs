@@ -114,7 +114,7 @@ namespace NUnitTestProject
         [Test]
         public void ReturnMatchingIndexes_ValidStringsButNoMatches_ReturnEmptyList()
         {
-            IList<int> l = stringServices.ReturnMatchingIndexes("1", "123");
+            IList<int> l = stringServices.ReturnMatchingIndexes("abcdef", "123");
             Assert.IsTrue(l != null);
             Assert.IsTrue(l.Count == 0);
         }
